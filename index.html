@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin KIP Bireuen</title>
+    <title>SIMAK KIP Bireuen</title>
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
     <script>
-        // Mendaftarkan PWA agar tetap bisa diinstal
+        // Daftarkan Service Worker agar menu 'Instal' muncul
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
         }
-        // Otomatis pindah ke InfinityFree setelah PWA terdeteksi
-        window.location.href = "https://prekin.gt.tc/user/login.php";
+        
+        // Langsung lempar ke website asli InfinityFree
+        // Ganti URL di bawah dengan alamat asli InfinityFree Anda
+        window.location.href = "https://https://prekin.gt.tc/user/login.php";
     </script>
 </head>
 <body>
-    <p>Sedang mengalihkan ke sistem...</p>
+    <p style="text-align:center; margin-top:50px;">Menuju Sistem SIMAK KIP Bireuen...</p>
 </body>
 </html>
