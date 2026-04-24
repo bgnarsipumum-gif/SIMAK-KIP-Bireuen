@@ -2,22 +2,36 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMAK KIP Bireuen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Admin KIP Bireuen</title>
+    
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2c3e50">
-    <script>
-        // Daftarkan Service Worker agar menu 'Instal' muncul
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <style>
+        body, html { 
+            margin: 0; padding: 0; height: 100%; width: 100%; 
+            overflow: hidden; background-color: #ffffff;
         }
-        
-        // Langsung lempar ke website asli InfinityFree
-        // Ganti URL di bawah dengan alamat asli InfinityFree Anda
-        window.location.href = "https://https://prekin.gt.tc/user/login.php";
-    </script>
+        /* Iframe dibuat memenuhi layar penuh */
+        iframe { 
+            border: none; width: 100%; height: 100%; 
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <p style="text-align:center; margin-top:50px;">Menuju Sistem SIMAK KIP Bireuen...</p>
+
+    <iframe src="https://prekin.gt.tc/user/login.php"></iframe>
+
+    <script>
+        // Mendaftarkan Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+            .then(() => console.log("PWA Terdaftar!"))
+            .catch(err => console.log("Gagal daftar PWA:", err));
+        }
+    </script>
 </body>
 </html>
